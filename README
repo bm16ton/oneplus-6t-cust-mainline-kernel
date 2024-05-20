@@ -1,0 +1,20 @@
+In this kernel, the postmarketos oneplus 6t patches, the lcd driver no longer actually ever gets turned off/on si it can sorta survive X11 screen rotation or any other operation that resets the display, at least enuff to reboot (better then black screen), The volume buttons now send different keys depending on position of 3 way switch. switch up then volume-up = ctrl, volume-down=alt if slider middle volume up= ctrl,alt.backspace volume-down=tab slider down vol up = volume up, volume-down= volume down, Ill undoutedly change these. While testing multiple DE's it becomes appartent the issues with using the power key, every app and its cousin will want to be in control of it, many DE's dont even pass any keys not found on the keyboard layout etc etc. So The power key now sends F9 and I use custom scripts for the turning display on/off etc. Long press still forces shutdown. Wifi restrictions have been removed so be careful not to break the law and also maybe manage the tx-power to a lower more reasonable db. Probly more stuff I dont remember.
+
+Linux kernel
+============
+
+There are several guides for kernel developers and users. These guides can
+be rendered in a number of formats, like HTML and PDF. Please read
+Documentation/admin-guide/README.rst first.
+
+In order to build the documentation, use ``make htmldocs`` or
+``make pdfdocs``.  The formatted documentation can also be read online at:
+
+    https://www.kernel.org/doc/html/latest/
+
+There are various text files in the Documentation/ subdirectory,
+several of them using the reStructuredText markup notation.
+
+Please read the Documentation/process/changes.rst file, as it contains the
+requirements for building and running the kernel, and information about
+the problems which may result by upgrading your kernel.
